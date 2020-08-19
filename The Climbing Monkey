@@ -1,0 +1,41 @@
+/*Correct answer   TIME 0.16s  solution 36911750 */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	    Scanner sc = new Scanner(System.in);
+	    int T=sc.nextInt();
+	    
+	    while(T>0)
+	    {
+	        int H=sc.nextInt(),N=sc.nextInt(),M=sc.nextInt();
+	        float sum=0,i=0;
+	        
+	        while((float)H!=sum){
+	            
+	            if((float)H<=sum+N)
+	            break;
+	            sum+=(float)(N-M);
+	            i++;
+	            
+	        }
+	          
+	        if((float)H!=sum)
+	        {  int temp=H-(int)sum;
+	            i+=(float)temp/N;
+	        }
+	       
+	        
+	      
+	      System.out.println((Math.round(i*100.0)/100.0));
+	        T--;
+	    }
+	    
+	}
+}
